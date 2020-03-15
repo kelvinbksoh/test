@@ -47,7 +47,17 @@ Three regression algorithms has been considered, since the problem at hand is a 
 Several hyperparameters configurations are stored in `hyperparams.py` file. The following are the final hyperparameters found by RandomizedSearchCV. The train test split are always **80:20** ratio.
 
 #### RandomForestRegressor hyperparameters ####
+<<<<<<< HEAD
 `'n_estimators':` **1000** <br>`'min_samples_split':` 5<br>`'min_samples_leaf':` 10<br>`'max_features':` 'auto'<br>`'max_depth':`  **50**<br>`'criterion':` 'mse<br>`'bootstrap':` True<br>
+=======
+`'n_estimators':` **1000** <br>
+ `'min_samples_split':` 5
+ `'min_samples_leaf':` 10
+ `'max_features':` 'auto'
+ `'max_depth':`  **50**
+ `'criterion':` 'mse
+ `'bootstrap':` True
+>>>>>>> 7ee4287de6734b9941d7668b7b053b462b268753
  
 Took **53.64** seconds for **1000** trees and a depth of **50**<br>Train RMSE:**773.0876**<br>Test RMSE: **1730.0279**<br>
  
