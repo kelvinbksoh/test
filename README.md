@@ -47,7 +47,7 @@ Three regression algorithms has been considered, since the problem at hand is a 
 Several hyperparameters configurations are stored in `hyperparams.py` file. The following are the final hyperparameters found by RandomizedSearchCV. The train test split are always **80:20** ratio.
 
 #### RandomForestRegressor hyperparameters ####
-`'n_estimators':` **1000**
+`'n_estimators':` **1000** <br>
  `'min_samples_split':` 5
  `'min_samples_leaf':` 10
  `'max_features':` 'auto'
