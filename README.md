@@ -7,7 +7,7 @@ The following files and their functionality have been described below:
 For running the Python script `main.py` in command line
 
 
-**main.py file: **
+**main.py file:**
 Contains the wrapper functions of the different models and contains the main logic to create the training model and to perform forecasting.
 
 **utils.py file:**
@@ -60,28 +60,14 @@ Took only **5.37** seconds!<br>Train RMSE: **775.0954**<br>Test RMSE: **1731.057
  
  
  #### XGBoostRegressor hyperparameters ####
-`'n_estimators':` **700**,
- `'min_child_weight':` 1,
- `'max_depth':` **90**,
- `'learning_rate':` 0.05,
- `'gamma':` 0.4,
- `'colsample_bytree':` 0.7,
- `'alpha':` 3
- Took **37.48** seconds for **700** trees and a depth of **90**
-X_train: **0.4284**
-X_test: **2004.3382**
+`'n_estimators':` **700**,<br>`'min_child_weight':` 1,<br>`'max_depth':` **90**,<br>`'learning_rate':` 0.05,<br>`'gamma':` 0.4,<br>`'colsample_bytree':` 0.7,<br>`'alpha':` 3<br>
+ 
+ Took **37.48** seconds for **700** trees and a depth of **90**<br>X_train: **0.4284**<br>X_test: **2004.3382**<br>
 
 Similarly extrapolating has been done for the XGBoostRegressor as well. This reduced the training computational speed by **10x** yet significantly reduces the overall <b>RMSE</b>.
-`'n_estimators':` **100**,
- `'min_child_weight':` 5,
- `'max_depth':` **30**,
- `'learning_rate':` 0.08,
- `'gamma':` 0.4,
- `'colsample_bytree':` 0.8,
- `'alpha':` 3
-  Took **3.29** seconds for **100** trees and a depth of **30**
-X_train: **52.2658**
-X_test: **1845.5027**
+`'n_estimators':` **100**,<br> `'min_child_weight':` 5,<br> `'max_depth':` **30**,<br>`'learning_rate':` 0.08,<br>`'gamma':` 0.4,<br> `'colsample_bytree':` 0.8,<br>`'alpha':` 3<br>
+ 
+Took **3.29** seconds for **100** trees and a depth of **30**<br>X_train: **52.2658**<br>X_test: **1845.5027**<br>
 
  ### Ensemble Model (RandomForestRegressor + XGBoostRegressor) ###
   Took **9.0** seconds to run both models with the above optimal hyperparameters.
