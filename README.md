@@ -47,30 +47,15 @@ Three regression algorithms has been considered, since the problem at hand is a 
 Several hyperparameters configurations are stored in `hyperparams.py` file. The following are the final hyperparameters found by RandomizedSearchCV. The train test split are always **80:20** ratio.
 
 #### RandomForestRegressor hyperparameters ####
-`'n_estimators':` **1000**
- `'min_samples_split':` 5
- `'min_samples_leaf':` 10
- `'max_features':` 'auto'
- `'max_depth':`  **50**
- `'criterion':` 'mse
- `'bootstrap':` True
+`'n_estimators':` **1000** <br>`'min_samples_split':` 5<br>`'min_samples_leaf':` 10<br>`'max_features':` 'auto'<br>`'max_depth':`  **50**<br>`'criterion':` 'mse<br>`'bootstrap':` True<br>
  
-Took **53.64** seconds for **1000** trees and a depth of **50**
-Train RMSE:**773.0876**
-Test RMSE: **1730.0279**
+Took **53.64** seconds for **1000** trees and a depth of **50**<br>Train RMSE:**773.0876**<br>Test RMSE: **1730.0279**<br>
  
 In addition, an alternative set of hyperparameters has been found by extrapolating the search from the hyperparameters found in RandomizedSearchCV by manual trial and error. This reduced the training computational speed by **10x** yet with a competitive <b>RMSE</b>.
-`'n_estimators':` **100**
- `'min_samples_split':` 5
- `'min_samples_leaf':` 10
- `'max_features':` 'auto'
- `'max_depth':`  **30**
- `'criterion':` 'mse
- `'bootstrap':` True
+
+`'n_estimators':` **100**<br>`'min_samples_split':` 5<br>`'min_samples_leaf':` 10<br>`'max_features':` 'auto'<br>`'max_depth':`  **30**<br>`'criterion':` 'mse<br>`'bootstrap':` True<br>
  
-Took only **5.37** seconds!
-Train RMSE: **775.0954**
-Test RMSE: **1731.0579**
+Took only **5.37** seconds!<br>Train RMSE: **775.0954**<br>Test RMSE: **1731.0579**<br>
 
  
  
@@ -108,7 +93,7 @@ X_test: **1758.3363**
 
 And the following graph shows the forecasted result from the 1000th row onwards in the train set and display all forecasted values from the test set.
 
-![](https://srv-file10.gofile.io/download/sQby69/ensemble_model_result_last_1000.PNG)
+![](ensemble_model_result_last_1000.PNG)
 
  
 
@@ -218,7 +203,7 @@ Select the option to visualize the graph
 Selection Option: 1
 ```
 After selecting Option 1, a plot of the forecasted data will be pop up.
-![](https://srv-file10.gofile.io/download/sQby69/ensemble_model_result_last_1000.PNG)
+![](ensemble_model_result_last_1000.PNG)
 
 Given the visualizion on the above forecasted test set (Second graph), we can see the forecasted trend (blue) are somehow identical to the original trend (green) but with a large error on rapid changes at various occasions. Given the analysis on EDA 'total number of active users' are always increasing with time, hence the model have a hard time matching the sudden change, neverthless the weekly patterns are captured.
 
