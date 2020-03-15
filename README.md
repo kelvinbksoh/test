@@ -79,7 +79,7 @@ X_test: **1758.3363**
 
 And the following graph shows the forecasted result from the 1000th row onwards in the train set and display all forecasted values from the test set.
 
-![](ensemble_model_first_1000.PNG)
+![](ensemble_first_1000.PNG)
 
 Given the visualizion on the above forecasted test set (Second graph), we can see the forecasted trend (blue) are somehow identical to the original trend (green) but with a large error on rapid changes at various occasions. Given the analysis on EDA 'total number of active users' are always increasing with time, hence the model have a hard time matching the sudden change, neverthless the weekly patterns are captured.
 
