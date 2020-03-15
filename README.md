@@ -69,7 +69,7 @@ Similarly extrapolating has been done for the XGBoostRegressor as well. This red
  
 Took **3.29** seconds for **100** trees and a depth of **30**<br>X_train: **52.2658**<br>X_test: **1845.5027**<br>
 
- ### Ensemble Model (RandomForestRegressor + XGBoostRegressor) ###
+### Ensemble Model (RandomForestRegressor + XGBoostRegressor) ###
   Took **9.0** seconds to run both models with the above optimal hyperparameters.
 
 Ensemble Model (RandomForestRegressor + XGBoostRegressor)
@@ -79,7 +79,10 @@ X_test: **1758.3363**
 
 And the following graph shows the forecasted result from the 1000th row onwards in the train set and display all forecasted values from the test set.
 
-![](ensemble_model_result_last_1000.PNG)
+![](ensemble_mode_result_first_1000)
+
+Given the visualizion on the above forecasted test set (Second graph), we can see the forecasted trend (blue) are somehow identical to the original trend (green) but with a large error on rapid changes at various occasions. Given the analysis on EDA 'total number of active users' are always increasing with time, hence the model have a hard time matching the sudden change, neverthless the weekly patterns are captured.
+
 
  
 
@@ -189,9 +192,7 @@ Select the option to visualize the graph
 Selection Option: 1
 ```
 After selecting Option 1, a plot of the forecasted data will be pop up.
-![](ensemble_mode_result_first_1000.PNG)
-
-Given the visualizion on the above forecasted test set (Second graph), we can see the forecasted trend (blue) are somehow identical to the original trend (green) but with a large error on rapid changes at various occasions. Given the analysis on EDA 'total number of active users' are always increasing with time, hence the model have a hard time matching the sudden change, neverthless the weekly patterns are captured.
+![](ensemble_model_result_last_1000.PNG)
 
 ## Conclusion ##
 Initially ARIMA model was considered as the predictive model for forecasting in this dataset. However after some readings on timeseries, ARIMA was found to be a univariate model which does not model the relationship with other variables which might be important for this dataset. Hence, we have only check for stationarity in this dataset to factor in the moving averages calculated from the target variable "total number of active users". 
