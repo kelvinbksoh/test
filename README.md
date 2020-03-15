@@ -192,7 +192,7 @@ Select the option to visualize the graph
 Selection Option: 1
 ```
 After selecting Option 1, a plot of the forecasted data will be pop up.
-![](ensemble_first_1000)
+![](ensemble_first_1000.PNG)
 
 ## Conclusion ##
 Initially ARIMA model was considered as the predictive model for forecasting in this dataset. However after some readings on timeseries, ARIMA was found to be a univariate model which does not model the relationship with other variables which might be important for this dataset. Hence, we have only check for stationarity in this dataset to factor in the moving averages calculated from the target variable "total number of active users". 
